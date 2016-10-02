@@ -14,6 +14,7 @@ const API_KEY = 'AIzaSyCKpWl_BfFctVHhyG7TKg9j2cWWhOybNbg';
 // const is ES6 sintax : const is a constant that can never be reassing later
 // this is a class, Class App is also a component that is used as a constructor.
  class App extends Component {
+
    constructor(props){
       super(props);
 
@@ -21,7 +22,6 @@ const API_KEY = 'AIzaSyCKpWl_BfFctVHhyG7TKg9j2cWWhOybNbg';
         videos: [],
         selectedVideo: null
       };
-
    }
 
    videoSearch(term){
@@ -38,7 +38,8 @@ const API_KEY = 'AIzaSyCKpWl_BfFctVHhyG7TKg9j2cWWhOybNbg';
       const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 500);
 
       return (
-        <div>
+        <div className="mainBody">
+          <div className="Logo"><img src='../../iconmonstr-youtube-1-240.png' /></div>
           <SearchBar onSearchTermChange={ term => videoSearch({term})}/>
           <VideoDetail video={this.state.selectedVideo}/>
           <VideoList
