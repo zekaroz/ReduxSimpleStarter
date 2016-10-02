@@ -22,6 +22,8 @@ const API_KEY = 'AIzaSyCKpWl_BfFctVHhyG7TKg9j2cWWhOybNbg';
         videos: [],
         selectedVideo: null
       };
+
+      this.videoSearch('Ludovico Einaudi');
    }
 
    videoSearch(term){
